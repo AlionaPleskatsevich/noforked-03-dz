@@ -22,6 +22,7 @@ def get_active_employees(employees):
 
 
 # print(get_active_employees(employees))
+
 # Вернуть список уволенных сотрудников
 
 
@@ -34,3 +35,15 @@ def get_fired_employees(employees):
 
 
 # print(get_fired_employees(employees))
+
+# Вернуть список сотрудников указанного отдела
+
+def get_department_employees(employees, department):
+    dep_employees = []
+    for employee in employees:
+        if employee.get("department") == department:
+            dep_employees.append(employee)
+    return dep_employees
+
+
+# print(get_department_employees(employees, "Sales"))
